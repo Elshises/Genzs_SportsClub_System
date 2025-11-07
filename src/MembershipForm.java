@@ -3,7 +3,7 @@ import java.sql.*;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.Calendar;
-import com.toedter.calendar.JDateChooser;
+//import com.toedter.calendar.JDateChooser;
 import java.util.Date;
 
 
@@ -72,7 +72,7 @@ public class MembershipForm extends javax.swing.JFrame{
         jLabel14 = new javax.swing.JLabel();
         jPasswordField1 = new javax.swing.JPasswordField();
         Feelabel = new javax.swing.JLabel();
-        jDateChooser1 = new com.toedter.calendar.JDateChooser();
+        //jDateChooser1 = new com.toedter.calendar.JDateChooser();
         jLabel17 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -259,7 +259,7 @@ public class MembershipForm extends javax.swing.JFrame{
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(selectgamebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(jDateChooser1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                //.addComponent(jDateChooser1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(Nextofkinfield, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 197, Short.MAX_VALUE)))
                         .addGap(50, 50, 50)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -366,7 +366,7 @@ public class MembershipForm extends javax.swing.JFrame{
                                 .addComponent(Registerbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(36, 36, 36))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                       .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                       //.addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))))
         );
 
@@ -427,9 +427,9 @@ public class MembershipForm extends javax.swing.JFrame{
             pstmt.setString(4,Nextofkinfield.getText());
            SimpleDateFormat date = new SimpleDateFormat("YYYY-MM-dd");
             
-           date.format(jDateChooser1.getDate());
+           //date.format(jDateChooser1.getDate());
            
-           pstmt.setString(5,(date.format(jDateChooser1.getDate())).toString());
+           //pstmt.setString(5,(date.format(jDateChooser1.getDate())).toString());
             pstmt.setInt(6,Integer.parseInt(Contactfield.getText()));
             pstmt.setString(7,SubcountiesComboBox.getSelectedItem().toString());
             pstmt.setString(8,Schoolorcollegefield.getText());
@@ -442,9 +442,9 @@ public class MembershipForm extends javax.swing.JFrame{
             pstmt.setString(11,"NO");
             }
             
-            Date selectedDate = (jDateChooser1.getDate());
+            //Date selectedDate = (jDateChooser1.getDate());
             Calendar calendar = Calendar.getInstance();
-            calendar.setTime(selectedDate);
+            //calendar.setTime(selectedDate);
             int year = calendar.get(Calendar.YEAR);
             
             LocalDate myDate = LocalDate.now();
@@ -593,7 +593,7 @@ public class MembershipForm extends javax.swing.JFrame{
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.ButtonGroup buttonGroup3;
     private javax.swing.ButtonGroup buttonGroup4;
-    private com.toedter.calendar.JDateChooser jDateChooser1;
+    //private com.toedter.calendar.JDateChooser jDateChooser1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
